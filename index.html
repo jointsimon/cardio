@@ -14,48 +14,27 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-        <div class="grid2x2">
-          <div class="box box1"><div>hacer</div></div>
-          <div class="box box2"><div>querer</div></div>
-          <div class="box box3"><div>abrir</div></div>
-          <div class="box box4"><div>cerrar</div></div>
-          <div class="box box1"><div>hacer</div></div>
-          <div class="box box2"><div>querer</div></div>
-          <div class="box box3"><div>abrir</div></div>
-          <div class="box box4"><div>cerar</div></div>
-          <div class="box box1"><div>hacer</div></div>
-          <div class="box box2"><div>querer</div></div>
-          <div class="box box3"><div>abrir</div></div>
-          <div class="box box4"><div>cerar</div></div>
-          <div class="box box1"><div>hacer</div></div>
-          <div class="box box2"><div>querer</div></div>
-          <div class="box box3"><div>abrir</div></div>
-          <div class="box box4"><div>cerar</div></div>
+        <div id="1" class="grid2x2">
         </div>
-
-        <div class="grid2x2">
-          <div class="box box1"><div>att göra</div></div>
-          <div class="box box2"><div>att vilja</div></div>
-          <div class="box box3"><div>att öppna</div></div>
-          <div class="box box4"><div>att stänga</div></div>
-          <div class="box box1"><div>att göra</div></div>
-          <div class="box box2"><div>att vilja</div></div>
-          <div class="box box3"><div>att öppna</div></div>
-          <div class="box box4"><div>att stänga</div></div>
-          <div class="box box1"><div>att göra</div></div>
-          <div class="box box2"><div>att vilja</div></div>
-          <div class="box box3"><div>att öppna</div></div>
-          <div class="box box4"><div>att stänga</div></div>
-          <div class="box box1"><div>att göra</div></div>
-          <div class="box box2"><div>att vilja</div></div>
-          <div class="box box3"><div>att öppna</div></div>
-          <div class="box box4"><div>att stänga</div></div>
+        <div id="2" class="grid2x2">
         </div>
-
     </body>
 </html>
+
+<script>
+  var es = ['hacer', 'querer', 'abrir', 'cerrar', 'hacer', 'querer', 'abrir', 'cerrar', 'hacer', 'querer', 'abrir', 'cerrar', 'hacer', 'querer', 'abrir', 'cerrar']
+  var se = ['att göra', 'att vilja', 'att öppna', 'att stänga', 'att göra', 'att vilja', 'att öppna', 'att stänga', 'att göra', 'att vilja', 'att öppna', 'att stänga', 'att göra', 'att vilja', 'att öppna', 'att stänga']
+  var mylist1 = document.getElementById('1');
+  var mylist2 = document.getElementById('2');
+
+  for (let index = 0; index < es.length; index++) {
+    const element = es[index];
+    console.log(element)
+    mylist1.insertAdjacentHTML('beforeend', '<div class="box"><div>' + es[index] + '</div></div>');
+  }
+  for (let index = 0; index < se.length; index++) {
+    const element = se[index];
+    console.log(element)
+    mylist2.insertAdjacentHTML('beforeend', '<div class="box"><div>' + se[index] + '</div></div>');
+  }
+</script>
