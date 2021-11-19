@@ -12,29 +12,51 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/style.css">
+        <script id="data" type="text/javascript" src="verbs.js"></script>
+
+        <script type="text/javascript">
+            es_keys = Object.keys(data);
+            en_present = es_keys.map(x => {
+                return data[x]["e_present"];
+            });
+            var es = es_keys;
+            var se = en_present;
+            console.log('hej')
+        </script>
     </head>
     <body>
-        <div id="1" class="grid2x2">
-        </div>
-        <div id="2" class="grid2x2">
-        </div>
+        <div id="1" />
     </body>
 </html>
 
 <script>
-  var es = ['hacer', 'querer', 'abrir', 'cerrar', 'hacer', 'querer', 'abrir', 'cerrar', 'hacer', 'querer', 'abrir', 'cerrar', 'hacer', 'querer', 'abrir', 'cerrar']
-  var se = ['att göra', 'att vilja', 'att öppna', 'att stänga', 'att göra', 'att vilja', 'att öppna', 'att stänga', 'att göra', 'att vilja', 'att öppna', 'att stänga', 'att göra', 'att vilja', 'att öppna', 'att stänga']
-  var mylist1 = document.getElementById('1');
-  var mylist2 = document.getElementById('2');
+  // var es = ['hacer', 'querer', 'abrir', 'cerrar', 'hacer', 'querer', 'abrir', 'cerrar', 'hacer', 'querer', 'abrir', 'cerrar', 'hacer', 'querer', 'abrir', 'cerrar']
+  // var se = ['att göra', 'att vilja', 'att öppna', 'att stänga', 'att göra', 'att vilja', 'att öppna', 'att stänga', 'att göra', 'att vilja', 'att öppna', 'att stänga', 'att göra', 'att vilja', 'att öppna', 'att stänga']
+  var grid = document.getElementById('1');
 
-  for (let index = 0; index < es.length; index++) {
-    const element = es[index];
-    console.log(element)
-    mylist1.insertAdjacentHTML('beforeend', '<div class="box"><div>' + es[index] + '</div></div>');
+  var html = "";
+  for (let index = 0; index < 32; index++) {
+    var step = index % 16;
+    if (step == 0) {
+        console.log("<grid>")
+        html += "<div class=\"grid2x2\">";
+    }
+
+    console.log("<box/>")
+    var element = es[index];
+    html += '<div class="box"><div>' + es[index] + '</div></div>';
+
+    if (step == 15) {
+        console.log("</grid>")
+        html += "</div>";
+    }
+
+    // console.log(html)
   }
-  for (let index = 0; index < se.length; index++) {
-    const element = se[index];
-    console.log(element)
-    mylist2.insertAdjacentHTML('beforeend', '<div class="box"><div>' + se[index] + '</div></div>');
-  }
+  grid.insertAdjacentHTML('beforeend', html);
+  // for (let index = 0; index < se.length; index++) {
+  //   const element = se[index];
+  //   // console.log(element)
+  //   mylist2.insertAdjacentHTML('beforeend', '<div class="box"><div>' + se[index] + '</div></div>');
+  // }
 </script>
