@@ -3,17 +3,18 @@ html, body {
   padding: 0px;
   color: black;
   font-family: monospace;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 
 .grid2x2 {
-  min-height: 100%;
+  min-height: 98%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin: 10px;
 }
 .grid2x2 > div {
   display: flex; 
@@ -27,4 +28,4 @@ html, body {
   flex-direction: row;
 }
 
-.box { margin: 2px; border: 1px solid black; border-radius: 10px }
+.box { padding: 2px; border: 2px solid black; border-radius: 10px }
