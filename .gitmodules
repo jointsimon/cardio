@@ -1,0 +1,3 @@
+[submodule "spanish-verbs"]
+	path = spanish-verbs
+	url = git@github.com:fjarri/spanish-verbs.git
