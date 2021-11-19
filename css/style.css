@@ -3,7 +3,7 @@ html, body {
   padding: 0px;
   color: black;
   font-family: monospace;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   font-weight: bold;
   margin: 0;
@@ -31,4 +31,7 @@ html, body {
   flex-direction: row;
 }
 
-.box { padding: 2px; border: 2px solid black; border-radius: 10px }
+.box { padding: 2px; border: 2px solid black; border-radius: 10px;
+  background-image: url('carddeco.png');
+  background-size: cover;
+}
