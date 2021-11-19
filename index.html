@@ -21,11 +21,19 @@
             });
             var es = es_keys;
             var se = en_present;
-            console.log('hej')
+            var final = [];
+            for (let i = 0; i < (es.length - 16); i+=16) {
+                for (let j = 0; j < 16; ++j) {
+                    final.push(es[i + j])
+                }
+                for (let j = 0; j < 16; ++j) {
+                    final.push(se[i + j])
+                }
+            }
+
         </script>
     </head>
-    <body>
-        <div id="1" />
+    <body id="1">
     </body>
 </html>
 
@@ -35,28 +43,20 @@
   var grid = document.getElementById('1');
 
   var html = "";
-  for (let index = 0; index < 32; index++) {
+  for (let index = 0; index < final.length; index++) {
+
     var step = index % 16;
     if (step == 0) {
-        console.log("<grid>")
         html += "<div class=\"grid2x2\">";
     }
 
-    console.log("<box/>")
-    var element = es[index];
-    html += '<div class="box"><div>' + es[index] + '</div></div>';
+    var element = final[index];
+    html += '<div class="box"><div>' + element + '</div></div>';
 
     if (step == 15) {
-        console.log("</grid>")
         html += "</div>";
     }
 
-    // console.log(html)
   }
   grid.insertAdjacentHTML('beforeend', html);
-  // for (let index = 0; index < se.length; index++) {
-  //   const element = se[index];
-  //   // console.log(element)
-  //   mylist2.insertAdjacentHTML('beforeend', '<div class="box"><div>' + se[index] + '</div></div>');
-  // }
 </script>
