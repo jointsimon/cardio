@@ -1,11 +1,14 @@
 html, body {
   height: 100%;
-  margin: 0;
-  color: white;
+  padding: 0px;
+  color: black;
   font-family: monospace;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
+  font-weight: bold;
 }
+
+
 .grid2x2 {
   min-height: 100%;
   display: flex;
@@ -14,7 +17,7 @@ html, body {
 }
 .grid2x2 > div {
   display: flex; 
-  flex-basis: calc(50% - 0px);  
+  flex-basis: calc(25% - 8px);  
   justify-content: center;
   flex-direction: column;
 }
@@ -24,7 +27,7 @@ html, body {
   flex-direction: row;
 }
 
-.box { margin: 0px; }
+.box { margin: 3px; border: 1px solid black; border-radius: 10px }
 .box1 { background-color: red; }
 .box2 { background-color: orange; }
 .box3 { background-color: purple; }
